@@ -67,7 +67,7 @@ subjects = [f"p{str(i).zfill(2)}" for i in range(15)]
 all_data = {}
 start_graph_build = time.time()
 for subject in subjects:
-    subject_path = os.path.join(base_path, subject, f"{subject}_landmarks_128.csv")
+    subject_path = os.path.join(base_path, subject, f"{subject}_landmarks.csv")
     all_data[subject] = load_and_preprocess_data(subject_path)
 end_graph_build = time.time()
 print("The time of graph building for all subjects:", (end_graph_build - start_graph_build), "s")
